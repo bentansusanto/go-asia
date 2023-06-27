@@ -2,7 +2,7 @@ import MediaQuery from "../../config/MediaQuery"
 import LogoColdplay from '../../assets/logo-coldplay.svg';
 import Galaxy from '../../assets/galaxy.svg';
 import Saturnus from '../../assets/saturnus.svg';
-import ListTour from "../Tour/components/listTour";
+import ListTours from "../Tour/components/ListTour";
 import { Link } from "react-router-dom";
 
 
@@ -39,9 +39,9 @@ const Homepage = () => {
           {!isMobile && <img src={Saturnus} alt="galaxy" className="w-52" />}
         </div>
       </div>
-      <div className={`${isMobile? "mx-3 mt-10" : "mx-36 mt-20 mb-20"}`}>
-        <p className="uppercase font-oxygen-mono text-center">All shows on sale now</p>
-        <ListTour/>
+      <div className={`${isMobile? "mt-10" : "mx-36 mt-20 mb-20"}`}>
+        <p className="uppercase font-oxygen-mono text-center mb-5">All shows on sale now</p>
+        <ListTours/>
       </div>
     </div>
   )
