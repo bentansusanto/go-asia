@@ -16,7 +16,8 @@ const Navbar = () => {
   const [openCart, setOpenCart] = useState(false);
   const location = useLocation();
 
-  const isStorePage = location.pathname === "store";
+  const isStorePage = location.pathname === "/store";
+  const isHomePage = location.pathname === "/";
 
   // handle open navbar
   const handleOpenNav = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={`${!isMobile && "px-20"} py-5`}>
+    <div className={`${!isMobile && "px-20"} ${isHomePage&&"hidden"} py-5`}>
       {isMobile ? (
         // Mobile Device
         <div>
@@ -72,7 +73,7 @@ const Navbar = () => {
         </div>
       ) : (
         // Desktop Device
-        <div className="flex items-center">
+        <div className={`${isHomePage&&"hidden"} flex items-center`}>
           {/* <img src={Logo} alt="logo-coldplay" className="w-40" /> */}
           <h1 className="text-2xl text-pink-500 font-eb-garamond">COLDPLAY</h1>
           <nav className="flex space-x-8 ml-auto font-oxygen-mono text-sm">
