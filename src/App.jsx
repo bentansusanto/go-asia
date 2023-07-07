@@ -4,6 +4,7 @@ import Ticket from './components/Ticket'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Tour from './components/Tour'
 import Store from './components/Store'
+import NotFound from './components/NotFound'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/store' element={<Store/>}/>
           <Route path='/ticket' element={<Ticket/>}/>
           <Route path='/form-ticket' element={<FormTicket/>}/>
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
       </Router>
   )
