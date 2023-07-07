@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import MediaQuery from "../../config/MediaQuery";
 // import Logo from '../../assets/logo-coldplay.svg'
 import { useState } from "react";
@@ -16,7 +16,7 @@ const Navbar = () => {
   const [openCart, setOpenCart] = useState(false);
   const location = useLocation();
 
-  const isStorePage = location.pathname === "/store";
+  const isStorePage = location.pathname === "store";
 
   // handle open navbar
   const handleOpenNav = () => {

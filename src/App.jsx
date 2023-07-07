@@ -7,7 +7,6 @@ import Store from './components/Store'
 
 function App() {
   return (
-    <>
       <Router>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
@@ -17,7 +16,6 @@ function App() {
           <Route path='/form-ticket' element={<FormTicket/>}/>
         </Routes>
       </Router>
-    </>
   )
 }
 
