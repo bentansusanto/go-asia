@@ -26,13 +26,14 @@ body {
 }
 
 input, textarea{
-  @apply outline-none placeholder:text-[15px] text-[16px] font-oxygen-mono
+  @apply outline-none placeholder:text-sm text-[16px] font-oxygen-mono
 }
 
 label{
-  @apply text-sm text-gray-500 font-oxygen-mono
+  @apply text-xs text-gray-500 font-oxygen-mono
 }
 
 li{
   @apply list-none
 }
+

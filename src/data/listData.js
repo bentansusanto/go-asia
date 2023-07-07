@@ -1,5 +1,12 @@
 export const listTour = [
     {
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur,",
+        country: "Malaysia",
+        date_tour: "22 Nov, 2023",
+        ticket: "presale jun 19"
+    },
+    {
         location_tour: "Singapore National Stadium",
         country: "Singapore",
         date_tour: "23 Jan, 2024",
@@ -25,99 +32,76 @@ export const listTour = [
     }  
 ]
 
-export const listTicketSingapore = [
+export const listTicketMalaysia = [
     {   
-        name_ticket: "Ultimate Spheres Expreience",
-        price: "$1.098",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        name_ticket: "Ultimate Expreience",
+        price: "RM 3,088",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
 
     },
     {
-        name_ticket: "Supersolis Experience",
-        price: "$538",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        name_ticket: "My Universe",
+        price: "RM 2,108",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
-        name_ticket: "Kubik Experience",
-        price: "$398",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        name_ticket: "Higher Power",
+        price: "RM 1,258",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 1",
-        price: "$298",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        price: "RM 1,288",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 2",
-        price: "$268",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        price: "Sold Out",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
-        name_ticket: "CAT 3",
-        price: "$238",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        name_ticket: "CAT 3 (Standing)",
+        price: "Sold Out",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 4",
-        price: "Sold Out",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
-    },
-    {
-        name_ticket: "General Standing",
-        price: "$168",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        price: "RM 598",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 5",
-        price: "$168",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        price: "RM 498",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 6",
-        price: "$148",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
+        price: "Sold Out",
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
     },
     {
         name_ticket: "CAT 7",
-        price: "$128",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
-    },
-    {
-        name_ticket: "CAT 8",
         price: "Sold Out",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
-    },
-    {
-        name_ticket: "CAT 9",
-        price: "Sold Out",
-        location_tour: "Singapore National Stadium",
-        country: "Singapore",
-    },
-]
-
-export const paymentMethod = [
-    {
-        name_payment: "BCA"
-    },
-    {
-        name_payment: "BNI"
-    },
-    {
-        name_payment: "Mandiri"
-    },
-    {
-        name_payment: "Master Card"
-    },
+        location_tour: "National Stadium Bukit Jalil",
+        city: "Kuala Lumpur",
+        country: "Malaysia",
+    }
 ]
