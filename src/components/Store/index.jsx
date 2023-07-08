@@ -1,9 +1,9 @@
-import Navbar from '../Navbar'
 import Product from './components/Product'
 import BgStore from '../../assets/banner-coldplay.webp'
 import MediaQuery from '../../config/MediaQuery'
 import {BiChevronDown} from 'react-icons/bi'
 import { useState } from 'react'
+import Navbar from '../Navbar'
 
 const Store = () => {
   const isMobile = MediaQuery("(max-width: 600px)")
@@ -23,7 +23,7 @@ const Store = () => {
 
   return (
     <div>
-        <Navbar/>
+      <Navbar/>
         <div>
           <img src={BgStore} alt="bg-store" className='mx-auto w-screen'/>
           <div className={`${isMobile? "mt-8 space-y-6" :"mx-40 mt-10 space-y-10"}`}>

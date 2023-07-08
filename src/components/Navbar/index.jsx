@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import MediaQuery from "../../config/MediaQuery";
 // import Logo from '../../assets/logo-coldplay.svg'
 import { useState } from "react";
@@ -17,7 +17,6 @@ const Navbar = () => {
   const location = useLocation();
 
   const isStorePage = location.pathname === "/store";
-  const isHomePage = location.pathname === "/";
 
   // handle open navbar
   const handleOpenNav = () => {
@@ -27,17 +26,17 @@ const Navbar = () => {
   // handle open search
   const handleOpenSearch = () => {
     setOpenSearch(!openSearch);
-    setOpenCart(false)
+    setOpenCart(false);
   };
 
   // handle open cart
   const handleOpenCart = () => {
     setOpenCart(!openCart);
-    setOpenSearch(false)
+    setOpenSearch(false);
   };
 
   return (
-    <div className={`${!isMobile && "px-20"} ${isHomePage&&"hidden"} py-5`}>
+    <div className={`${!isMobile && "px-20"} py-5`}>
       {isMobile ? (
         // Mobile Device
         <div>
@@ -73,7 +72,7 @@ const Navbar = () => {
         </div>
       ) : (
         // Desktop Device
-        <div className={`${isHomePage&&"hidden"} flex items-center`}>
+        <div className={` flex items-center`}>
           {/* <img src={Logo} alt="logo-coldplay" className="w-40" /> */}
           <h1 className="text-2xl text-pink-500 font-eb-garamond">COLDPLAY</h1>
           <nav className="flex space-x-8 ml-auto font-oxygen-mono text-sm">
@@ -83,31 +82,46 @@ const Navbar = () => {
               </li>
             ))}
           </nav>
-          {
-            isStorePage&&
-          <div className="flex relative items-center space-x-8 ml-auto">
-            {/* Search */}
-            <div className="relative">
-              <IoSearch onClick={handleOpenSearch} className="text-lg"/>
-              <div className={`${openSearch? "bg-[#1d1d1d7d] rounded-md border border-[#dd20ba7d] w-72" : "hidden"} absolute top-8 right-0 p-3`}>
+          {isStorePage && (
+            <div className="flex relative items-center space-x-8 ml-auto">
+              {/* Search */}
+              <div className="relative">
+                <IoSearch onClick={handleOpenSearch} className="text-lg" />
+                <div
+                  className={`${
+                    openSearch
+                      ? "bg-[#1d1d1d7d] rounded-md border border-[#dd20ba7d] w-72"
+                      : "hidden"
+                  } absolute top-8 right-0 p-3`}
+                >
                   <div className="bg-[#13116c91] rounded-md py-2.5 px-3 flex items-center space-x-3">
-                    <IoSearch className="text-lg text-gray-400"/>
-                    <input type="text" placeholder="Search here ..."  className="w-full bg-transparent"/>
+                    <IoSearch className="text-lg text-gray-400" />
+                    <input
+                      type="text"
+                      placeholder="Search here ..."
+                      className="w-full bg-transparent"
+                    />
                   </div>
+                </div>
+              </div>
+              {/* Cart */}
+              <div onClick={handleOpenCart} className="relative">
+                <img src={Cart} alt="shop-cart" className="w-6" />
+                <div className="bg-pink-500 w-5 h-5 text-[12px] text-center rounded-full absolute top-0 left-4 p-0.5">
+                  0
+                </div>
+                <div
+                  className={`${
+                    openCart
+                      ? " bg-[#1d1d1d7d] border border-[#dd20ba7d] top-9"
+                      : "hidden"
+                  } w-72 rounded-md px-5 py-3 transition-all right-0 ease-out absolute duration-300`}
+                >
+                  <p className="font-oxygen-mono text-sm">Product not found</p>
+                </div>
               </div>
             </div>
-            {/* Cart */}
-            <div onClick={handleOpenCart}  className="relative">
-              <img  src={Cart} alt="shop-cart" className="w-6" />
-              <div className="bg-pink-500 w-5 h-5 text-[12px] text-center rounded-full absolute top-0 left-4 p-0.5">
-                0
-              </div>
-            <div className={`${openCart? " bg-[#1d1d1d7d] border border-[#dd20ba7d] top-9" : "hidden"} w-72 rounded-md px-5 py-3 transition-all right-0 ease-out absolute duration-300`}>
-                <p className="font-oxygen-mono text-sm">Product not found</p>
-            </div>
-            </div>
-          </div>
-          }
+          )}
         </div>
       )}
     </div>

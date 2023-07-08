@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 
 import MediaQuery from "../../config/MediaQuery"
-// import Navbar from "../Navbar"
+import Navbar from "../Navbar"
 import ListTours from "./components/ListTour"
 import Logo from '../../assets/logo-coldplay.svg'
 import { Link } from "react-router-dom"
@@ -26,6 +26,7 @@ const Tour = () => {
 
   return (
     <div>
+      <Navbar/>
         <div className={`${isMobile? "mx-3" : "flex mx-40"} mt-10`}>
           <div>
             <img src={Logo} alt="logo-coldplay" className={` ${isMobile? "w-40" : "w-52"} mx-auto`}/>

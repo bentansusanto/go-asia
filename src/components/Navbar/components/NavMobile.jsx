@@ -21,7 +21,7 @@ const NavMobile = ({openNav, setOpenNav}) => {
             <nav className="space-y-8 px-5 mt-20 text-center">
               {
                 listNav.map((val, idx) => (
-                  <li key={idx} className="text-4xl font-eb-garamond text-pink-400 hover:text-white">
+                  <li key={idx} onClick={() => setOpenNav(false)} className="text-4xl font-eb-garamond text-pink-400 hover:text-white">
                     <Link to={val.link}>{val.page}</Link>
                   </li>
                 ))
