@@ -1,12 +1,16 @@
-import MediaQuery from "../../../config/MediaQuery"
-import { products } from "../../../data/listProduct"
 
-const Product = () => {
+import MediaQuery from "../../../config/MediaQuery"
+
+
+// eslint-disable-next-line react/prop-types
+const Product = ({sortProducts}) => {
     const isMobile = MediaQuery("(max-width: 600px)")
+
   return (
-    <div className={`${isMobile? "grid-cols-2 gap-5" : "grid-cols-4 gap-6"} grid `}>
+    <div className={`${isMobile? "grid-cols-2 gap-5 px-3" : "grid-cols-4 gap-6"} grid `}>
        {
-          products.map((val, idx) => (
+          // eslint-disable-next-line react/prop-types
+          sortProducts.map((val, idx) => (
             <div key={idx} className="space-y-2">
                 <img src={val.thumbnail} alt="" />
                 <div className="space-y-1">

@@ -40,7 +40,7 @@ const Navbar = () => {
       {isMobile ? (
         // Mobile Device
         <div>
-          <div className="flex px-5">
+          <div className="flex px-3">
             {/* <img src={Logo} alt="logo-coldplay" className="w-36" /> */}
             <h1 className="text-2xl text-pink-500 font-eb-garamond">
               COLDPLAY
