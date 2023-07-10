@@ -39,7 +39,7 @@ const CartMobile = ({openCart, setOpenCart}) => {
       {/* Form Checkout */}
       <div>
         <form className="grid grid-cols-1 gap-3">
-          <div className="overflow-y-scroll h-[28vh]">
+          <div className="overflow-y-scroll h-[32vh]">
           <div className="space-y-1 mb-3">
             <label>Name</label>
             <input type="text" placeholder="Enter your name" className="w-full bg-transparent border border-gray-500 outline-none py-2.5 px-3" />
