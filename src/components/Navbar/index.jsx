@@ -8,6 +8,7 @@ import { listNav } from "../../data/listMenu";
 import CartMobile from "./components/CartMobile";
 import NavMobile from "./components/NavMobile";
 import SearchMobile from "./components/SearchMobile";
+import CartDesktop from "./components/CartDesktop";
 
 const Navbar = () => {
   const isMobile = MediaQuery("(max-width: 600px)");
@@ -20,8 +21,6 @@ const Navbar = () => {
 
   const isStorePage = location.pathname === "/store";
  
-
-  
 
   // handle open navbar
   const handleOpenNav = () => {
@@ -36,7 +35,7 @@ const Navbar = () => {
 
   // handle open cart
   const handleOpenCart = () => {
-    setOpenCart(!openCart);
+    setOpenCart(true);
     setOpenSearch(false);
   };
 
@@ -73,7 +72,7 @@ const Navbar = () => {
           {/* Open Navbar */}
           <SearchMobile openSearch={openSearch} setOpenSearch={setOpenSearch} />
           {/* Open Cart */}
-          <CartMobile openCart={openCart} />
+          <CartMobile openCart={openCart} setOpenCart={setOpenCart} />
         </div>
       ) : (
         // Desktop Device
@@ -110,20 +109,12 @@ const Navbar = () => {
                 </div>
               </div>
               {/* Cart */}
-              <div onClick={handleOpenCart} className="relative">
+              <div onMouseEnter={handleOpenCart} className="relative">
                 <img src={Cart} alt="shop-cart" className="w-6" />
-                <div className="bg-pink-500 w-5 h-5 text-[12px] text-center rounded-full absolute top-0 left-4 p-0.5">
+                <div className="bg-pink-500 w-5 h-5 text-[12px] text-center rounded-full absolute top-0 left-4">
                   0
                 </div>
-                <div
-                  className={`${
-                    openCart
-                      ? " bg-[#1d1d1d7d] border border-[#dd20ba7d] top-9"
-                      : "hidden"
-                  } w-72 rounded-md px-5 py-3 transition-all right-0 ease-out absolute duration-300`}
-                >
-                  <p className="font-oxygen-mono text-sm">Product not found</p>
-                </div>
+                <CartDesktop openCart={openCart} setOpenCart={setOpenCart}/>
               </div>
             </div>
           )}
