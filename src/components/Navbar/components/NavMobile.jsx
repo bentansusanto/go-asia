@@ -13,7 +13,7 @@ const listSocial = [
 // eslint-disable-next-line react/prop-types
 const NavMobile = ({openNav, setOpenNav}) => {
   return (
-    <div className={`${openNav ? "bg-[#0d0428] top-0 py-5" : "hidden"}  w-screen h-screen fixed transition-all ease-linear duration-500 z-30`}> 
+    <div className={`${openNav ? "bg-[#0d0428] top-0 py-5" : "hidden"}  w-screen h-screen fixed transition-all ease-linear duration-500 z-40`}> 
             <div className="items-center px-5 flex">
               <IoClose onClick={() => setOpenNav(false)} className="text-2xl text-pink-400 hover:text-white"/>
               <img src={Logo} alt="logo-coldplay" className="w-40 mx-auto" />

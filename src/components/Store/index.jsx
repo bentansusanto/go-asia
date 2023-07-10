@@ -2,22 +2,26 @@ import Product from './components/Product'
 import BgStore from '../../assets/banner-coldplay.webp'
 import MediaQuery from '../../config/MediaQuery'
 import {BiChevronDown} from 'react-icons/bi'
-import {useState, useEffect } from 'react'
+import {useState } from 'react'
 import Navbar from '../Navbar'
 import {LuSettings2} from 'react-icons/lu'
 import { products } from '../../data/listProduct'
-
+import ProductDetail from './components/ProductDetail'
 const Store = () => {
   const isMobile = MediaQuery("(max-width: 600px)")
-  const categories = ["All","Fashion","Accesories"]
+  const categories = ["all","fashion","accesories"]
+
   // const [loading, setLoading] = useState(false)
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const sortBy = ["low to high", "high to low"]
-  // const listProducts = products
+
   const [openFilter, setOpenFilter] = useState(false)
   const [selectSorting, setSelectSorting] = useState("")
-  const [selectCategories, setSelectCategories] = useState("")
-  const [filteredProduct, setFilteredProduct] = useState([])
+  const [selectCategories, setSelectCategories] = useState("all")
+  const [selectProduct, setSelectProduct] = useState(0)
+  const [openProductDetail, setOpenProductDetail] = useState(false)
+ 
+
 
   const handleSelectFilter = (list) => {
     setSelectSorting(list)
@@ -33,24 +37,13 @@ const Store = () => {
     setOpenFilter(!openFilter)
   }
 
-  useEffect(() => {
-    let filtered = products;
-    if (selectCategories !== 'All') {
-      filtered = products.filter((product) => product.category === selectCategories.toLowerCase());
-    }
+  const handleSelectProduct = (productId) => {
+      const product = products.find(item => item.id === productId)
+      setSelectProduct(product)
+      setOpenProductDetail(true)
+  }
 
-    let sorted = filtered;
-    if (selectSorting === sortBy[0]) {
-      sorted = [...filtered].sort((a, b) => a.price - b.price);
-    } else if (selectSorting === sortBy[1]) {
-      sorted = [...filtered].sort((a, b) => b.price - a.price);
-    }
-
-    setFilteredProduct(sorted)
-  }, [selectCategories, selectSorting, sortBy]);
-  
-
-
+ 
 
   return (
     <div>
@@ -62,8 +55,8 @@ const Store = () => {
                 <div className={`${isMobile? "overflow-x-scroll scroll-smooth space-x-3 ml-3 no-scrollbar" : "space-x-5"}  flex`}>
                   {
                       categories.map((val, idx) => (
-                          <div key={idx} onClick={() => handleSelectCategories(val)} className='border border-blue-500 cursor-pointer hover:bg-pink-500 font-oxygen-mono rounded-full py-1.5 px-5'>
-                              <p className='text-sm'>{val}</p>
+                          <div key={idx} onClick={() => handleSelectCategories(val)} className={` ${selectCategories === val && "bg-pink-500"} border border-blue-500 cursor-pointer hover:bg-pink-500 font-oxygen-mono rounded-full py-1.5 px-5`}>
+                              <p className='text-sm capitalize'>{val}</p>
                           </div>
                       ))
                   }
@@ -79,7 +72,7 @@ const Store = () => {
                       <div className={` ${!openFilter&&"hidden"} mt-5 flex space-x-3`}>
                         {
                           sortBy.map((list, idx) => (
-                            <div key={idx} className={`bg-gray-200 py-1.5 px-3 text-black rounded-full`}>
+                            <div key={idx} onClick={() => handleSelectFilter(list)} className={`${selectSorting === list&&"bg-pink-500"} bg-gray-200 py-1.5 px-3 text-black rounded-full`}>
                               <p className='capitalize'>{list}</p>
                             </div>
                           ))
@@ -108,7 +101,13 @@ const Store = () => {
                 </div>)
                 }
                 </div>
-            <Product sortProducts={filteredProduct}/>
+            <Product sortBy={sortBy} selectCategories={selectCategories} selectSorting={selectSorting} handleSelectProduct={handleSelectProduct}/>
+
+            {/* Product Detail Mobile Device */}
+            {
+              selectProduct&&
+              <ProductDetail selectProduct={selectProduct} openProductDetail={openProductDetail} setOpenProductDetail={setOpenProductDetail}/>
+            }   
           </div>
         </div>
     </div>

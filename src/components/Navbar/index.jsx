@@ -16,7 +16,12 @@ const Navbar = () => {
   const [openCart, setOpenCart] = useState(false);
   const location = useLocation();
 
+ 
+
   const isStorePage = location.pathname === "/store";
+ 
+
+  
 
   // handle open navbar
   const handleOpenNav = () => {

@@ -4,6 +4,8 @@ export const products =[
         name_product: "MUSIC OF THE SPHERES - BLACK TEE",
         category: "fashion",
         price: 20,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "music-blacktee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -18,6 +20,8 @@ export const products =[
         name_product: "MUSIC OF THE SPHERES - BLACK TEE",
         category: "fashion",
         price: 20,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "music-blacktee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -32,6 +36,8 @@ export const products =[
         name_product: "WORLD TOUR 9 BLACK TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "world-blacktee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -46,6 +52,8 @@ export const products =[
         name_product: "SPECTRUM TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "spectrum-tee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -60,6 +68,8 @@ export const products =[
         name_product: "MUSIC OF THE SPHERES WORLD TOUR TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "spheres-worldtee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -74,6 +84,8 @@ export const products =[
         name_product: "MUSIC OF THE SPHERES WORLD TOUR TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "spheres-worldtee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -88,6 +100,8 @@ export const products =[
         name_product: "VIVA LA VIDA - TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "viva-tee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -102,6 +116,8 @@ export const products =[
         name_product: "MYLO XYLOTO - TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "mylo-tee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -116,6 +132,8 @@ export const products =[
         name_product: "EVERYDAY LIFE - TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "everyday-tee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
@@ -130,6 +148,8 @@ export const products =[
         name_product: "A HEAD FULL OF DREAMS - TEE",
         category: "fashion",
         price: 50,
+        desc : "The Coldplay T-shirt is a must-have for all fans of the iconic British rock band. Made from high-quality cotton, this shirt features a stylish design that showcases Coldplay's logo and album artwork. With its comfortable fit and classic look, it's perfect for casual outings, concerts, or simply showing off your love for Coldplay. Get ready to rock out in style with this awesome Coldplay T-shirt",
+        slug: "dreams-tee",
         size: [
             "S", "M", "L", "XL", "XXL"
         ],
