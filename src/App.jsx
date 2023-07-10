@@ -7,6 +7,7 @@ import Store from './components/Store'
 import NotFound from './components/NotFound'
 import ProductDetail from './components/Store/components/ProductDetail'
 import News from './components/News'
+import NewsDetail from './components/News/components/NewsDetail'
 
 
 
@@ -16,8 +17,9 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage/>}/>
           <Route path='/tour' element={<Tour/>}/>
-          <Route exact path='/store' element={<Store/>}/>
-          <Route exact path='/news' element={<News/>}/>
+          <Route path='/store' element={<Store/>}/>
+          <Route path='/news' element={<News/>}/>
+          <Route path='/news/:id' element={<NewsDetail/>}/>
           <Route path='/store/:id/:slug' element={<ProductDetail/>}/>
           <Route path='/ticket' element={<Ticket/>}/>
           <Route path='/form-ticket' element={<FormTicket/>}/>
